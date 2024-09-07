@@ -3,7 +3,7 @@ const router = express.Router();
 
 const { register, login, validateToken } = require("../controllers/user");
 const { getDashboard } = require("../controllers/dashboard");
-const authenticateToken = require("../middlewares/auth");
+const { authenticateToken } = require("../middlewares/auth");
 
 router.post("/register", register);
 router.post("/login", login);
